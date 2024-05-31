@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+.bg {
+    animation: slide 10s ease-in-out infinite alternate;
+    background-image: linear-gradient(-20deg, #579ab1a4 50%, #e1d7c6 50%);
+    bottom: 0;
+    left: -100%;
+    opacity: .5;
+    position: fixed;
+    right: -50%;
+    top: 0;
+    z-index: -1;
+}
+
+.content {
+    background-color: rgba(255, 255, 255, .8);
+    border-radius: .25em;
+    box-shadow: 0 0 .25em rgba(255, 255, 255, 0.25);
+    box-sizing: border-box;
+    left: 50%;
+    padding: 10vmin;
+    position: fixed;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1 {
+    font-family: monospace;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(25%);
+    }
+}
+
+.botones {
+    align-items: center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+button {
+    margin: 10px;
+    cursor: pointer;
+    width: 300px;
+    height: 130px;
+    background-color: #c8ba99;
+    border: 1px solid #CCCCCC;
+    border-radius: 8px;
+}
+
+button a {
+    text-decoration: none;
+    font-size: 20px;
+    color: ghostwhite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.slideshowContainer {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+    height: 550px;
+    margin: 0 auto;
+}
+
+.imageSlides {
+    width: 100%;
+    height: auto;
+    max-height: 550px;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: -1;
+}
+
+/* acá preparamos el div para las imágenes*/
+.dos-imagenes {
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap; /* Permite que las imágenes se envuelvan a la siguiente línea si no hay suficiente espacio */
+    padding: 30px 10px;
+    justify-content: center; /*centramos las imágenes horizontalmente, hay otro para vertical */
+}
+/* Rayen, acá le puse el ancho maximo */
+/* de las imagenes para que en el pc no  */
+/* no ocupen todo el espacio y a la vez sean responsive */
+.dos-imagenes img {
+    width: 100%;
+    height: auto;	/*aca ajusta la altura con respecto al ancho al 100%(maximo 600px)*/
+	max-width: 600px; /*con esto pongo el ancho maximo */
+    margin: 10px;
+/*espero te ayude esto jejej es un trucaso que nos va a sevir  mucho en futuros trabajos */
+}
+
+.visible {
+    opacity: 1;
+}
+
+.slideshowArrow {
+    font-size: 7em;
+    color: rgba(141, 141, 141, 0.7);
+    cursor: pointer;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.slideshowArrow:hover {
+    opacity: 0.75;
+}
+
+#leftArrow {
+    position: absolute;
+    left: 4%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#rightArrow {
+    position: absolute;
+    right: 4%;
+    top: 50%;
+    transform: translate(50%, -50%);
+}
+
+/* LOS 3 CIRCULOS DEL CAMBIO DE IMÁGENES PRINCIPAL */
+.slideshowCircles {
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.circle {
+    display: inline-block;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: solid 2px rgba(141, 141, 141, 0.7);
+    transition: 1s ease-in-out;
+}
+
+.dot {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: solid 2px rgba(255, 255, 255, 0.5);
+}
