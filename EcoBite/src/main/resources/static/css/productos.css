@@ -1,0 +1,60 @@
+/* Establece estilos generales y márgenes para el cuerpo del documento */
+body {
+    margin: 0;
+}
+
+/* Contenedor principal con un ancho del 90% del viewport y centrado */
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Establece que el header ocupe el 100% de ancho */
+.header {
+    width: 100%;
+}
+
+/* Sección de productos (alfombras y mantas) con estilo de flexbox y espacio entre elementos */
+#alfombras,
+#mantas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Utiliza space-between para maximizar el espacio */
+    padding-top: 40px;
+}
+
+/* Estilo de cada producto en las secciones de alfombras y mantas */
+.producto {
+    width: 23%; /* Ajusta el ancho de cada producto para mostrar hasta 4 columnas */
+    margin-bottom: 20px;
+}
+
+/* Estilo del botón de producto para ocupar el 100% de ancho */
+.boton-producto {
+    width: 100%;
+    height: auto; /* Ajusta la altura automáticamente */
+}
+
+/* Estilo adicional para hacer los iconos más pequeños en pantallas más pequeñas */
+.box2 {
+    max-width: 90%;
+    margin: 20px auto;
+}
+
+/* Estilos adicionales para la sección de carrito en pantallas pequeñas */
+#carrito-section {
+    text-align: center;
+}
+
+#carrito-lista {
+    padding: 0;
+}
+
+#carrito-total {
+    margin-top: 10px;
+}
+
+/* Establece que el footer ocupe el 100% de ancho */
+footer {
+    width: 100%;
+}
